@@ -1,0 +1,6 @@
+<!--components/switchLab/switchLab.wxml-->
+<view class="switchLab" bindtap="chooseLab">
+    <button class="label {{currentIndex === 0 ? 'active' : ''}}"
+          wx:for="{{labList}}"
+          data-index="{{item.value}}">{{item.labelName}}</button>
+</view>

@@ -1,0 +1,40 @@
+<view>
+    <view class="productDesc">
+        <!--摄影师头像-->
+        <view class="avatar">
+            <image  src="../../assert/user_avert.png"></image>
+        </view>
+        <!--关注-->
+        <view class="user_info_item">
+            <text>{{userInfo.focusOn}}</text>
+            <text class="subtitle">关注</text>
+        </view>
+        <!--选择-->
+        <view class="user_info_item">
+            <text>{{userInfo.choose}}</text>
+            <text class="subtitle">选择</text>
+        </view>
+        <!--客户满意度-->
+        <view class="user_info_item">
+            <text>{{userInfo.customerSatisfaction}}</text>
+            <text class="subtitle">客户满意度</text>
+        </view>
+        <view class="share">
+            <image  src="../../assert/分享_share-one.png">分享</image>
+        </view>
+    </view>
+    <view class="productName">
+        <view class="baseInfo">
+            <text>{{userInfo.name+"\n"}}</text>
+            <text class="subtitle">常驻地：{{userInfo.address}}</text>
+        </view>
+        <button plain="true">+ 关注</button>
+    </view>
+    <view class="motto">
+        <text>{{userInfo.motto}}</text>
+    </view>
+    <switchLab labList="{{labelList}}"></switchLab>
+    <view class="content">
+        <image src=""></image>
+    </view>
+</view>

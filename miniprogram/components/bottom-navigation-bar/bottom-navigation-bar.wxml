@@ -1,0 +1,24 @@
+<!-- bottom-navigation-bar.wxml -->
+
+<view class="bottom-bar">
+    <view class="nav-item {{currentIndex === 0 ? 'active' : ''}}" data-index="0"  bindtap="handleTabClick">
+        <image src="../../assert/摄像_monitor.png"/>
+        <text>摄影</text>
+    </view>
+    <view class="nav-item {{currentIndex === 1 ? 'active' : ''}}" data-index="1"  bindtap="handleTabClick">
+        <image src="../../assert/购物袋_mall-bag.png"/>
+        <text>商城</text>
+    </view>
+    <view class="nav-item {{currentIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="handleTabClick">
+        <image src="../../assert/交易清单_transaction-order.png"/>
+        <text>订单</text>
+    </view>
+    <view class="nav-item {{currentIndex === 3 ? 'active' : ''}}" data-index="3" bindtap="handleTabClick">
+        <image src="../../assert/提醒_remind.png"/>
+        <text>消息</text>
+    </view>
+    <view class="nav-item {{currentIndex === 4 ? 'active' : ''}}" data-index="4" bindtap="handleTabClick">
+        <image src="../../assert/用户_user.png"></image>
+        <text>我的</text>
+    </view>
+</view>

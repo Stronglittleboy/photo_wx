@@ -1,0 +1,39 @@
+/* top-navigation-bar.wxss */
+
+.top-bar {
+    height: auto;
+    background-color: #2f84e4;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.head{
+    height: 8vh;
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    text-align: center;
+}
+.twoHead{
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+}
+.title {
+    position: relative;
+}
+
+.title.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1vh; /* 1vh 的距离 */
+    width: 100%;
+    height: 2px; /* 下划线的高度 */
+    background-color: #fff;
+}

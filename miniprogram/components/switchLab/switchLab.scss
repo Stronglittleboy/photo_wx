@@ -1,0 +1,17 @@
+/* components/switchLab/switchLab.wxss */
+page{
+  width: 100wh;
+  height: 20vh;
+}
+.switchLab{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100wh;
+  justify-content: space-between;
+  align-content: center;
+  gap: 5wh;
+  .label{
+    width: 50%;
+  }
+}

@@ -1,0 +1,21 @@
+<!-- index.wxml -->
+
+<view>
+    <top-navigation-bar/>
+
+    <!-- 主体内容区域 -->
+    <scroll-view class="content" scroll-y="true" style="height: calc(100vh - 128rpx);">
+        <view class="waterfall-container">
+            <waterfall-card wx:for="{{cardList}}" wx:key="index"
+                            backgroundImage="{{item.backgroundImage}}"
+                            topRightText="{{item.topRightText}}"
+                            centerBottomText="{{item.centerBottomText}}"
+                            bottomIcon="{{item.bottomIcon}}"
+                            bindtap = "clickProdut"
+                            data-key="{{item.id}}"
+            />
+        </view>
+    </scroll-view>
+
+    <bottom-navigation-bar/>
+</view>

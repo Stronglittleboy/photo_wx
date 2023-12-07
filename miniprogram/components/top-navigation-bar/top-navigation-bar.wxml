@@ -1,0 +1,11 @@
+<!-- top-navigation-bar.wxml -->
+
+<view class="top-bar" bindtap="handleTabClick">
+    <view class="head"><text>摄影师列表</text></view>
+    <view class="twoHead">
+        <text class="title {{currentIndex === 0 ? 'active' : ''}}" data-index="0">人气</text>
+        <text class="title {{currentIndex === 1 ? 'active' : ''}}" data-index="1">时间</text>
+<!--        <icon class="icon-box-img" type="search" size="5"></icon>-->
+<!--        <text class="title {{currentIndex === 2 ? 'active' : ''}}" data-index="2">筛选</text>-->
+    </view>
+</view>

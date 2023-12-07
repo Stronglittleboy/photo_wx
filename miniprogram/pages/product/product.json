@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "top-navigation-bar": "../../components/top-navigation-bar/top-navigation-bar",
+    "bottom-navigation-bar":"../../components/bottom-navigation-bar/bottom-navigation-bar",
+    "waterfall-card": "../../components/waterfall-card/waterfall-card",
+    "switchLab": "../../components/switchLab/switchLab"
+  }
+}

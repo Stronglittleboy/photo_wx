@@ -1,0 +1,42 @@
+/* bottom-navigation-bar.wxss */
+
+.bottom-bar {
+    height: 8vh;
+    background-color: #2f84e4;
+    color: #fff;
+    text-align: center;
+    line-height: 64px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    height: 8vh;
+    width: 25vh;
+    position: relative;
+}
+
+
+.nav-item.active{
+    /*transform: translateX(-50%);*/
+    background-color: rgba(255, 255, 255, 0.8); /* 背景颜色，可根据需要调整 */
+    border-radius: 2vh;
+}
+
+.nav-item image {
+    width: 5vh;
+    height: 5vh;
+}
+
+
+.nav-item text {
+    width: 5vh;
+    height: 5vh;
+    font-size: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px; /* 文字容器的内边距，可根据需要调整 */
+}

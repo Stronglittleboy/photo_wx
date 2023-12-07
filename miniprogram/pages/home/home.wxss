@@ -1,0 +1,42 @@
+/* index.wxss */
+
+/* 根据需要设置页面的全局样式，例如背景色等 */
+
+/* 顶部导航栏样式可以在此调整 */
+top-navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 根据实际情况设置合适的 z-index */
+}
+
+/* 底部导航栏样式可以在此调整 */
+bottom-navigation-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 根据实际情况设置合适的 z-index */
+}
+
+.content{
+    margin-top: 15vh;
+    width: 100%;
+}
+
+/* waterfall-container 样式 */
+.waterfall-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 1vh;
+}
+
+waterfall-card {
+    width: 50%; /* 调整卡片宽度，使其在容器中占比较合适的空间 */
+    box-sizing: border-box; /* 避免边框和内边距增加元素宽度 */
+    margin-bottom: 4vh; /* 调整卡片之间的垂直间距 */
+}
