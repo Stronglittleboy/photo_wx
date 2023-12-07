@@ -10,9 +10,14 @@
     "navigationStyle": "custom"
   },
   "usingComponents": {
-    "cu-custom":"/colorui/components/cu-custom"
+    "van-button": "@vant/weapp/button",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },
-  "style": "v2",
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,

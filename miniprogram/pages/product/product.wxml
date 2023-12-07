@@ -1,4 +1,5 @@
 <view>
+
     <view class="productDesc">
         <!--摄影师头像-->
         <view class="avatar">
@@ -33,7 +34,12 @@
     <view class="motto">
         <text>{{userInfo.motto}}</text>
     </view>
-    <switchLab labList="{{labelList}}"></switchLab>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="客照">客照</van-tab>
+        <van-tab title="作品">作品</van-tab>
+        <van-tab title="档期">档期</van-tab>
+        <van-tab title="评价">评价</van-tab>
+    </van-tabs>
     <view class="content">
         <image src=""></image>
     </view>
