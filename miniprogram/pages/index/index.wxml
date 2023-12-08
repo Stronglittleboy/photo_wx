@@ -1,22 +1,25 @@
 <!--index.wxml-->
-<!-- <navigation-bar title="摄像选择" back="{{false}}" color="black" background="#FFF"></navigation-bar> -->
-<view class="container"  style="background-image: url(../../assert/img.png);background-size: 100vh 100vh;height:100vh">
-  <!-- 上半部分为空，可放其他内容 -->
-  <!-- 下半部分布局 -->
-  <view class="page-container">
-    <view class="no-space">
-        <view>
-            <text class="label_1">选择你所在城市</text>
+        <!-- <navigation-bar title="摄像选择" back="{{false}}" color="black" background="#FFF"></navigation-bar> -->
+<view class="container" style="background-image: url(../../assert/img.png);background-size: 100vh 100vh;height:100vh">
+    <!-- 上半部分为空，可放其他内容 -->
+    <!-- 下半部分布局 -->
+
+    <view class="page-container">
+        <view class="no-space">
+            <view>
+                <text class="label_1">选择你所在城市</text>
+            </view>
+            <view>
+                <text class="label_2">Select City</text>
+            </view>
         </view>
-        <view>
-            <text class="label_2">Select City</text>
+        <view class="button-container">
+            <button class="button" wx:for="{{cityList}}" wx:for-index="idx" bindtap="handleButtonClick" data-value="{{item.value}}"
+                    wx:key="idx"
+                    size="mini">
+                {{item.cityName}}
+            </button>
         </view>
     </view>
-    <view class="button-container">
-       <button class="button" wx:for="{{cityList}}" bindtap="handleButtonClick" data-value="{{item.value}}" size="mini">
-        {{item.cityName}}
-      </button>
-    </view>
-  </view>
 </view>
   
