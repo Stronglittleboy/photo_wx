@@ -1,25 +1,67 @@
-<!--index.wxml-->
-        <!-- <navigation-bar title="摄像选择" back="{{false}}" color="black" background="#FFF"></navigation-bar> -->
-<view class="container" style="background-image: url(../../assert/img.png);background-size: 100vh 100vh;height:100vh">
-    <!-- 上半部分为空，可放其他内容 -->
-    <!-- 下半部分布局 -->
+<!-- index.wxml -->
+<view>
+    <van-nav-bar
+            title="摄影师列表"
+            bind:click-left="onClickLeft"
+            bind:click-right="onClickRight"
+    >
+        <van-button custom-style="border:0px" type="default" slot="left" bind:click="">
+            {{city.name}}<van-icon name="arrow-down" />
+        </van-button>
 
-    <view class="page-container">
-        <view class="no-space">
-            <view>
-                <text class="label_1">选择你所在城市</text>
-            </view>
-            <view>
-                <text class="label_2">Select City</text>
-            </view>
-        </view>
-        <view class="button-container">
-            <button class="button" wx:for="{{cityList}}" wx:for-index="idx" bindtap="handleButtonClick" data-value="{{item.value}}"
-                    wx:key="idx"
-                    size="mini">
-                {{item.cityName}}
-            </button>
-        </view>
-    </view>
+    </van-nav-bar>
+    <van-tabs active="{{ active }}" bind:change="onChange" bind:click="labClick">
+        <van-tab title="人气">
+            <!-- 主体内容区域 -->
+            <scroll-view class="content" scroll-y="true" style="height: calc(100vh - 128rpx);">
+                <view class="waterfall-container">
+                    <waterfall-card wx:for="{{cardList}}" wx:key="index"
+                                    isGood="{{item.isGood}}"
+                                    backgroundImage="{{item.backgroundImage}}"
+                                    topRightText="{{item.topRightText}}"
+                                    centerBottomText="{{item.centerBottomText}}"
+                                    bottomIcon="{{item.bottomIcon}}"
+                                    bindtap="clickProdut"
+                                    data-key="{{item.id}}"
+                    />
+                </view>
+            </scroll-view>
+        </van-tab>
+        <van-tab title="时间">时间</van-tab>
+        <van-tab title="筛选"></van-tab>
+    </van-tabs>
+    <!--筛选侧边框-->
+    <van-popup
+            show="{{ show }}"
+            position="right"
+            custom-style="width: 50%;height:100%;"
+            bind:close="onClose"
+    >
+        <van-row gutter="20">
+            <van-col span="8">常驻馆</van-col>
+        </van-row>
+        <van-row gutter="20">
+            <van-col span="12">
+                <button bindtap="venueNameClick">{{filterCriteria.venueName}}</button>
+            </van-col>
+        </van-row>
+    </van-popup>
+
+    <van-popup
+            show="{{ venueNameShow }}"
+            position="bottom"
+            custom-style="width: 100%;height:50%;"
+            bind:close="onClose"
+    >
+        <van-picker
+                show-toolbar
+                title="场馆"
+                columns="{{ columns }}"
+                bind:cancel="onCancelVenueName"
+                bind:confirm="onConfirmVenueName"
+        />
+    </van-popup>
+
+
+    <bottom-navigation-bar></bottom-navigation-bar>
 </view>
-  

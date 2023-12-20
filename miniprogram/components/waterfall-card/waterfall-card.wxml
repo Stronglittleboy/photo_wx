@@ -1,17 +1,19 @@
 <!-- waterfall-card.wxml -->
 <view class="card">
     <!-- 下层图片 -->
-    <image class="background-image"  src="{{backgroundImage}}" mode="aspectFill"></image>
+    <van-image width="100%" height="100%" src="{{backgroundImage}}" bind:click="imagCardClick"/>
     <!-- 上层内容 -->
     <view class="upper-layer">
-
         <!-- 右上角文字 -->
         <text class="top-right-text">{{topRightText}}</text>
 
         <!-- 水平居中靠底部的文字和图标 -->
         <view class="bottom-content">
-            <image class="bottom-icon" src="{{bottomIcon}}" mode="aspectFit"></image>
-            <text class="center-bottom-text">{{centerBottomText}}</text>
+            <text class="name">李世明</text>
+            <view>
+                <image wx:if="{{isGood}}" class="bottom-icon" src="./../../assert/trophy_icon-icons.com_67206.svg" />
+                <text class="center-bottom-text">{{centerBottomText}}</text>
+            </view>
         </view>
     </view>
 </view>

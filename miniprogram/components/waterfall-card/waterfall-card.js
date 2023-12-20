@@ -10,6 +10,10 @@ Component({
             type: String,
             value: '', // 右上角文字
         },
+        isGood: {
+            type: Boolean,
+            value: false, // 水平居中靠底部的文字
+        },
         centerBottomText: {
             type: String,
             value: '', // 水平居中靠底部的文字
@@ -20,7 +24,6 @@ Component({
         },
     },
     methods:{
-
         chooseProduct(e){
             console.log(e.target.dataset);
             console.log(e.currentTarget.dataset);
@@ -32,6 +35,9 @@ Component({
             //         }
             //     }
             // )
+        },
+        imagCardClick(){
+            
         }
     }
 })

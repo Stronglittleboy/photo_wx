@@ -2,6 +2,7 @@ Component({
     properties: {},
     data: {
         currentIndex: 0, // 默认选中第一个
+        activeBottomLab:0
     },
 
     methods: {
@@ -20,5 +21,9 @@ Component({
                 }
             }
         },
+        onChangeBottomLab(event){
+            this.setData({ activeBottomLab: event.detail });
+            console.log(event, '------');
+        }
     },
 });
